@@ -1,12 +1,53 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Navigation from '@/components/Navigation';
+import HeroSection from '@/components/HeroSection';
+import AboutSection from '@/components/AboutSection';
+import ProjectsSection from '@/components/ProjectsSection';
+import SkillsSection from '@/components/SkillsSection';
+import ContactSection from '@/components/ContactSection';
+
+// Register GSAP plugins
+gsap.registerPlugin(ScrollTrigger);
 
 const Index = () => {
+  useEffect(() => {
+    // Smooth scrolling setup
+    gsap.registerPlugin(ScrollTrigger);
+    
+    // Refresh ScrollTrigger on load
+    ScrollTrigger.refresh();
+
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <Navigation />
+      
+      <main>
+        <section id="hero">
+          <HeroSection />
+        </section>
+        
+        <AboutSection />
+        <ProjectsSection />
+        <SkillsSection />
+        <ContactSection />
+      </main>
+
+      {/* Footer */}
+      <footer className="border-t border-border/30 py-8">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <p className="text-muted-foreground">
+            © 2024 Eric Galvão. Desenvolvido com{' '}
+            <span className="text-red-500">❤️</span> usando React, GSAP e Tailwind CSS.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };
