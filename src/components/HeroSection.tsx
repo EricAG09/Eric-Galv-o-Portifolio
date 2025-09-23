@@ -47,7 +47,7 @@ const HeroSection = () => {
             y: "random(-20, 20)",
             x: "random(-10, 10)",
             rotation: "random(-5, 5)",
-            duration: "random(4, 6)",
+            duration: "random(2, 6)",
             repeat: -1,
             yoyo: true,
             ease: "sine.inOut",
@@ -93,7 +93,8 @@ const HeroSection = () => {
         </h1>
         
         <p ref={subtitleRef} className="hero-subtitle mb-12 max-w-3xl mx-auto">
-          Desenvolvedor Frontend Pleno especializado em React, Node.js e MongoDB
+          Sou um Desenvolvedor FullStack especializado em JavaScript | TypeScript | ReactJS | Angular | NodeJS | React Native | Next.
+          Crio soluções digitais modernas, seguras e escaláveis.
         </p>
         
         <a

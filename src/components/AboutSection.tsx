@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import avatarImage from '@/assets/developer-avatar.jpg';
+import avatarImage from '@/assets/eric.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -70,7 +70,7 @@ const AboutSection = () => {
     <section ref={sectionRef} id="about" className="section-container">
       <h2 className="section-title">Sobre Mim</h2>
       
-      <div className="grid md:grid-cols-2 gap-16 items-center">
+      <div className="sobre grid md:grid-cols-2 gap-16 items-center">
         {/* Profile Image */}
         <div className="flex justify-center md:justify-end">
           <div className="relative">
@@ -92,13 +92,15 @@ const AboutSection = () => {
           <div className="space-y-4 text-lg leading-relaxed text-muted-foreground">
             <p>
               Olá! Sou <span className="text-gradient font-semibold">Eric Galvão</span>, 
-              desenvolvedor frontend com mais de 3 anos de experiência criando 
+              desenvolvedor frontend com mais de 2 anos de experiência criando 
               experiências digitais excepcionais.
             </p>
             
             <p>
               Especializado em <span className="text-primary font-medium">React</span>, 
-              <span className="text-secondary font-medium"> TypeScript</span> e 
+              <span className="text-secondary font-medium"> TypeScript</span>,
+              <span className="text-secondary font-medium"> JavaScript</span>,
+              <span className="text-secondary font-medium"> React Native</span> e 
               <span className="text-primary font-medium"> Node.js</span>, transformo 
               ideias em aplicações web modernas e responsivas.
             </p>
@@ -111,7 +113,7 @@ const AboutSection = () => {
           </div>
 
           <div className="flex flex-wrap gap-3 pt-4">
-            {['React', 'TypeScript', 'Node.js', 'MongoDB', 'Tailwind CSS'].map((tech) => (
+            {['React', 'JavaScript', 'TypeScript', 'Node.js', 'MySQL', 'React Native', 'Next', 'MongoDB', 'Tailwind CSS'].map((tech) => (
               <span
                 key={tech}
                 className="skill-card text-sm font-medium text-foreground"

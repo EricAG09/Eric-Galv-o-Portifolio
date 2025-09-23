@@ -11,47 +11,47 @@ const ProjectsSection = () => {
 
   const projects = [
     {
-      title: "E-commerce Dashboard",
-      description: "Dashboard completo para gerenciamento de loja online com React, TypeScript e integração com APIs RESTful.",
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Chart.js"],
-      demoUrl: "#",
+      title: "Fortalimp",
+      description: "Site para desemtupidora com SEO otimizado, design responsivo e integração com WhatsApp.",
+      technologies: ["React", "TypeScript", "Node.JS", "Tailwind CSS", "Vite"],
+      demoUrl: "https://www.fortalimp.com/",
+      githubUrl: "https://github.com/EricAG09/fortalimp"
+    },
+    {
+      title: "GM-Tech Solutions",
+      description: "Site corporativo para empresa de tecnologia, com seções dinâmicas e design moderno. Com agendamento de serviços via WhatsApp.",
+      technologies: ["React", "Node.js", "TypeScript", "vite"],
+      demoUrl: "https://gm-solucoes-tecnologicas.vercel.app/",
       githubUrl: "#"
     },
     {
-      title: "Task Management App",
-      description: "Aplicação de gerenciamento de tarefas com drag & drop, categorização e sincronização em tempo real.",
-      technologies: ["React", "Node.js", "MongoDB", "Socket.io"],
-      demoUrl: "#",
-      githubUrl: "#"
+      title: "The Prince of Jacu",
+      description: "App para reservas de horarios em barbearia, com sistema de autenticação e painel de administração e integração com whatsApp.",
+      technologies: ["React", "TypeScript", "Node.js", "Tailwind CSS", "Firebase", "whatsApp API"],
+      demoUrl: "https://the-barber-prince-of-jacu.vercel.app/",
+      githubUrl: "https://github.com/EricAG09/Barbearia-LA-MARFIA"
     },
     {
-      title: "Weather Forecast",
-      description: "App de previsão do tempo com geolocalização, mapas interativos e interface responsiva.",
-      technologies: ["React", "OpenWeather API", "Leaflet", "CSS Modules"],
-      demoUrl: "#",
+      title: "Site institucional de um hotel e restaurante local",
+      description: "Site institucional moderno com design responsivo e otimização de performance.",
+      technologies: ["React", "Tailwind CSS", "Vite"],
+      demoUrl: "https://espaco-bem-estar.vercel.app/",
       githubUrl: "#"
     },
-    {
-      title: "Portfolio Website",
-      description: "Site pessoal moderno com animações GSAP, design responsivo e otimização de performance.",
-      technologies: ["React", "GSAP", "Tailwind CSS", "Vite"],
-      demoUrl: "#",
-      githubUrl: "#"
-    },
-    {
-      title: "Restaurant Menu",
-      description: "Sistema de cardápio digital com carrinho de compras, filtros de categoria e integração de pagamento.",
-      technologies: ["React", "Context API", "Stripe", "Firebase"],
-      demoUrl: "#",
-      githubUrl: "#"
-    },
-    {
-      title: "Chat Application",
-      description: "Aplicação de chat em tempo real com salas personalizadas, emojis e notificações push.",
-      technologies: ["React", "Socket.io", "Express", "JWT"],
-      demoUrl: "#",
-      githubUrl: "#"
-    }
+    // {
+    //   title: "Restaurant Menu",
+    //   description: "Sistema de cardápio digital com carrinho de compras, filtros de categoria e integração de pagamento.",
+    //   technologies: ["React", "Context API", "Stripe", "Firebase"],
+    //   demoUrl: "#",
+    //   githubUrl: "#"
+    // },
+    // {
+    //   title: "Chat Application",
+    //   description: "Aplicação de chat em tempo real com salas personalizadas, emojis e notificações push.",
+    //   technologies: ["React", "Socket.io", "Express", "JWT"],
+    //   demoUrl: "#",
+    //   githubUrl: "#"
+    // }
   ];
 
   useEffect(() => {
