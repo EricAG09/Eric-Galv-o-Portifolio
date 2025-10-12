@@ -1,4 +1,4 @@
-🚀 Portfolio Eric Galvão - Desenvolvedor Frontend
+🚀 Portfolio Eric Galvão - Desenvolvedor FullStack
 
 Um portfólio moderno, responsivo e animado criado com React, TypeScript, Tailwind CSS e GSAP. Apresenta animações fluidas, design elegante e experiência de usuário excepcional.
 
@@ -13,7 +13,7 @@ Um portfólio moderno, responsivo e animado criado com React, TypeScript, Tailwi
 
 🎯 Sobre o Projeto
 
-Este portfólio foi desenvolvido para showcasing das habilidades de Eric Galvão como Desenvolvedor Frontend Pleno. O site apresenta:
+Este portfólio foi desenvolvido para showcasing das minhas habilidades como Desenvolvedor FullStack. O site apresenta:
 
 Design Moderno: Interface clean com gradientes azul/roxo elegantes
 
