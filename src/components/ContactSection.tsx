@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { toast } from 'sonner';
+const WHATSAPP_NUMBER = '5585994066861';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -89,10 +90,9 @@ const ContactSection = () => {
       });
     }
 
-    // Simulate form submission
-    toast.success('Mensagem enviada com sucesso! Retornarei em breve.');
-    
-    // Reset form
+    const texto = `Olá Eric! 👋🏻`
+    const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(texto)}`
+    window.open(waUrl, '_blank', "noopene noreferrer");
     setFormData({ name: '', email: '', message: '' });
   };
 
@@ -107,19 +107,19 @@ const ContactSection = () => {
     {
       name: 'LinkedIn',
       icon: Linkedin,
-      url: 'https://linkedin.com/in/',
+      url: 'https://www.linkedin.com/in/eric-galvao/',
       color: 'hover:text-blue-400'
     },
     {
       name: 'GitHub',
       icon: Github,
-      url: 'https://github.com/',
+      url: 'https://github.com/EricAG09',
       color: 'hover:text-gray-300'
     },
     {
       name: 'WhatsApp',
       icon: MessageSquare,
-      url: 'https://wa.me/',
+      url: `https://wa.me/${WHATSAPP_NUMBER}`,
       color: 'hover:text-green-400'
     }
   ];

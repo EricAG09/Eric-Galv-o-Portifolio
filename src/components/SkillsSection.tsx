@@ -111,8 +111,7 @@ const SkillsSection = () => {
         </h3>
         <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
           {[
-            'GSAP', 'Framer Motion', 'Redux', 'Context API', 'REST APIs', 
-            'GraphQL', 'Firebase', 'Vercel', 'Docker', 'Jest', 'Cypress'
+            'GSAP', 'Redux', 'Context API', 'REST APIs', 'Supabase', 'Vercel', 'Docker', 'Jest', 'Kanban', 'Scrum', 'Strapi', 'Axios'
           ].map((tech) => (
             <span
               key={tech}

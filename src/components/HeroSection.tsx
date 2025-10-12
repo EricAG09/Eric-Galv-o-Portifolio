@@ -72,7 +72,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section ref={heroRef} id='heroSection'className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-[var(--hero-gradient)]" />
       
@@ -93,7 +93,7 @@ const HeroSection = () => {
         </h1>
         
         <p ref={subtitleRef} className="hero-subtitle mb-12 max-w-3xl mx-auto">
-          Sou um Desenvolvedor FullStack especializado em JavaScript | TypeScript | ReactJS | Angular | NodeJS | React Native | Next.
+          Sou um Desenvolvedor FullStack especializado em JavaScript | TypeScript | ReactJS | Angular | NodeJS | React Native | Nextjs | Java.
           Crio soluções digitais modernas, seguras e escaláveis.
         </p>
         

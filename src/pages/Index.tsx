@@ -32,11 +32,13 @@ const Index = () => {
         <section id="hero">
           <HeroSection />
         </section>
+          <AboutSection />
+          <ProjectsSection />
+          <SkillsSection />
+          <ContactSection />
         
-        <AboutSection />
-        <ProjectsSection />
-        <SkillsSection />
-        <ContactSection />
+
+        
       </main>
 
       {/* Footer */}

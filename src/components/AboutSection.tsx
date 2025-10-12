@@ -92,7 +92,7 @@ const AboutSection = () => {
           <div className="space-y-4 text-lg leading-relaxed text-muted-foreground">
             <p>
               Olá! Sou <span className="text-gradient font-semibold">Eric Galvão</span>, 
-              desenvolvedor frontend com mais de 2 anos de experiência criando 
+              desenvolvedor fullstack com mais de 2 anos de experiência criando 
               experiências digitais excepcionais.
             </p>
             

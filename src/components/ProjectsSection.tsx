@@ -38,20 +38,13 @@ const ProjectsSection = () => {
       demoUrl: "https://espaco-bem-estar.vercel.app/",
       githubUrl: "#"
     },
-    // {
-    //   title: "Restaurant Menu",
-    //   description: "Sistema de cardápio digital com carrinho de compras, filtros de categoria e integração de pagamento.",
-    //   technologies: ["React", "Context API", "Stripe", "Firebase"],
-    //   demoUrl: "#",
-    //   githubUrl: "#"
-    // },
-    // {
-    //   title: "Chat Application",
-    //   description: "Aplicação de chat em tempo real com salas personalizadas, emojis e notificações push.",
-    //   technologies: ["React", "Socket.io", "Express", "JWT"],
-    //   demoUrl: "#",
-    //   githubUrl: "#"
-    // }
+    {
+      title: "Agenda Siará Tech",
+      description: "Sistema web para visitantes reservarem na agenda as palestras e workshops que desejavam acompanhar durante o evento.",
+      technologies: ["React", "Context API", "Tailwind Css", "Supabase"],
+      demoUrl: "https://siara-tech-summit.vercel.app/auth",
+      githubUrl: "https://github.com/EricAG09/Siara-Tech-Summit"
+    }
   ];
 
   useEffect(() => {

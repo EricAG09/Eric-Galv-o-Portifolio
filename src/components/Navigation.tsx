@@ -1,11 +1,19 @@
+'use client'; // se estiver usando Next.js app router
+
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { Menu, X } from 'lucide-react';
+
+gsap.registerPlugin(ScrollToPlugin);
 
 const Navigation = () => {
   const navRef = useRef<HTMLElement>(null);
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  // ajuste conforme a altura do seu header
+  const OFFSET_Y = 96; // px
 
   const menuItems = [
     { label: 'Início', href: '#hero' },
@@ -16,34 +24,44 @@ const Navigation = () => {
   ];
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-
+    const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   useEffect(() => {
     if (navRef.current) {
-      gsap.fromTo(navRef.current, 
+      gsap.fromTo(
+        navRef.current,
         { y: -100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1, ease: "power3.out", delay: 0.5 }
+        { y: 0, opacity: 1, duration: 1, ease: 'power3.out', delay: 0.5 }
       );
     }
   }, []);
 
   const scrollToSection = (href: string) => {
-    const targetId = href.substring(1);
-    const targetElement = document.getElementById(targetId);
-    
-    if (targetElement) {
+    if (typeof window === 'undefined') return;
+
+    const targetId = href.replace('#', '');
+    const el = document.getElementById(targetId);
+    if (!el) return; // se não encontrar o id, não previna o default
+
+    // tentativa com GSAP + ScrollToPlugin
+    try {
       gsap.to(window, {
-        scrollTo: { y: targetElement, offsetY: 80 },
-        duration: 1.5,
-        ease: "power3.inOut"
+        duration: 0.9,
+        ease: 'power3.out',
+        scrollTo: { y: el, offsetY: OFFSET_Y }
       });
+    } catch {
+      // fallback nativo
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // compensa o header
+      window.setTimeout(() => {
+        window.scrollBy({ top: -OFFSET_Y, behavior: 'instant' as ScrollBehavior });
+      }, 0);
     }
+
     setIsOpen(false);
   };
 
@@ -51,8 +69,8 @@ const Navigation = () => {
     <nav
       ref={navRef}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled 
-          ? 'bg-background/80 backdrop-blur-md border-b border-border/50' 
+        scrolled
+          ? 'bg-background/80 backdrop-blur-md border-b border-border/50'
           : 'bg-transparent'
       }`}
     >
@@ -90,7 +108,7 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <button
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => setIsOpen((v) => !v)}
             className="md:hidden p-2 text-foreground hover:text-primary transition-colors duration-300"
             aria-label="Toggle menu"
           >
