@@ -5,69 +5,50 @@ import { ExternalLink, Github } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const ProjectsSection = () => {
+const Jobs = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
 
-  const projects = [
+  const Enterprise = [
     {
-      title: "Fortalimp",
+      title: "PWR Gestão",
       description:
-        "Site para desemtupidora com SEO otimizado, design responsivo e integração com WhatsApp.",
-      technologies: ["React", "TypeScript", "Node.JS", "Tailwind CSS", "Vite"],
-      demoUrl: "https://www.fortalimp.com/",
-      githubUrl: "https://github.com/EricAG09/fortalimp",
+        "Empresa de consultoria focada em soluções de software para gestão empresarial, oferecendo sistemas personalizados para otimizar processos e melhorar a eficiência dos negócios.",
+        technologies: ["Gestão", "Negócios", "Tecnologias", "Sistemas"],
+      demoUrl: "https://www.linkedin.com/company/pwrgestao/posts/?feedView=all",
     },
     {
-      title: "GM-Tech Solutions",
+      title: "Bolha",
       description:
-        "Site corporativo para empresa de tecnologia, com seções dinâmicas e design moderno. Com agendamento de serviços via WhatsApp.",
-      technologies: ["React", "Node.js", "TypeScript", "vite"],
-      demoUrl: "https://gm-solucoes-tecnologicas.vercel.app/",
-      githubUrl: "#",
+        "Empresa de tecnologia especializada em desenvolvimento de software, oferecendo soluções inovadoras para atender às necessidades dos clientes e impulsionar o crescimento dos negócios.",
+      technologies: ["Desenvolvimento", "Inovação", "Tecnologia", "Robotica", "Automação"],
+      demoUrl: "https://www.linkedin.com/company/bolha/posts/?feedView=all",
     },
     {
-      title: "The Prince of Jacu",
+      title: "Prefeitura de Apuiarés",
       description:
-        "App para reservas de horarios em barbearia, com sistema de autenticação e painel de administração e integração com whatsApp.",
+        "Órgão governamental responsável pela administração municipal de Apuiarés, oferecendo serviços públicos e promovendo o desenvolvimento da cidade.",
       technologies: [
-        "React",
-        "TypeScript",
-        "Node.js",
-        "Tailwind CSS",
-        "Firebase",
-        "whatsApp API",
+        "Administração",
+        "Governança",
+        "Tecnologia",
+        "Sistemas",
+        "Desenvolvimento",
+        "Inovação",
       ],
-      demoUrl: "https://the-barber-prince-of-jacu.vercel.app/",
-      githubUrl: "https://github.com/EricAG09/Barbearia-LA-MARFIA",
+      demoUrl: "https://www.apuiares.ce.gov.br/",
     },
     {
-      title: "Site institucional de um hotel e restaurante local",
+      title: "Desenvolvedor Freelancer",
       description:
-        "Site institucional moderno com design responsivo e otimização de performance.",
-      technologies: ["React", "Tailwind CSS", "Vite"],
-      demoUrl: "https://espaco-bem-estar.vercel.app/",
-      githubUrl: "#",
+        "Atuação como desenvolvedor freelancer, oferecendo serviços de desenvolvimento de software personalizados para clientes diversos, utilizando tecnologias modernas e práticas ágeis para entregar soluções eficientes e de alta qualidade.",
+      technologies: ["React", "Tailwind CSS", "Vite", "Node.js", "TypeScript", "Context API", "Supabase", "NestJS"],
     },
     {
-      title: "CRM - Sistema de Gestão de Relacionamento com Clientes",
+      title: "World of Hackers",
       description:
-        "Sistema web para gerenciamento de clientes, vendas e suporte, com painel administrativo e integração com WhatsApp.",
-      technologies: ["React", "Context API", "Tailwind Css", "Supabase", "NestJS"],
-    },
-    {
-      title: "Plataforma de Checklists",
-      description:
-        "Sistema web para criação e gerenciamento de checklists personalizados, com painel administrativo e integração com WhatsApp para notificações.",
-      technologies: ["React", "Context API", "Tailwind Css", "Supabase"],
-    },
-    {
-      title: "Agenda Siará Tech",
-      description:
-        "Sistema web para visitantes reservarem na agenda as palestras e workshops que desejavam acompanhar durante o evento.",
-      technologies: ["React", "Context API", "Tailwind Css", "Supabase"],
-      demoUrl: "https://siara-tech-summit.vercel.app/auth",
-      githubUrl: "https://github.com/EricAG09/Siara-Tech-Summit",
+        "Empresa especialiada em manutenção e desenvolvimento de sistemas, com foco em soluções personalizadas para atender às necessidades dos clientes e impulsionar o crescimento dos negócios.",
+      technologies: ["Desenvolvimento web", "Manutenção de computdores", "TI"],
     },
   ];
 
@@ -126,10 +107,10 @@ const ProjectsSection = () => {
 
   return (
     <section ref={sectionRef} id="projects" className="section-container">
-      <h2 className="section-title">Projetos</h2>
+      <h2 className="section-title">Experiência</h2>
 
       <div ref={cardsRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projects.map((project, index) => (
+        {Enterprise.map((project, index) => (
           <div key={index} className="project-card group">
             <div className="flex justify-between items-start mb-4">
               <h3 className="text-xl font-semibold text-foreground group-hover:text-gradient transition-all duration-300">
@@ -137,20 +118,11 @@ const ProjectsSection = () => {
               </h3>
               <div className="flex gap-2">
                 <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-lg bg-muted/50 hover:bg-primary/20 transition-all duration-300 group/btn"
-                  aria-label="Ver código no GitHub"
-                >
-                  <Github className="w-4 h-4 group-hover/btn:text-primary transition-colors" />
-                </a>
-                <a
                   href={project.demoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 rounded-lg bg-muted/50 hover:bg-secondary/20 transition-all duration-300 group/btn"
-                  aria-label="Ver demo do projeto"
+                  aria-label="Ver mais detalhes"
                 >
                   <ExternalLink className="w-4 h-4 group-hover/btn:text-secondary transition-colors" />
                 </a>
@@ -178,4 +150,4 @@ const ProjectsSection = () => {
   );
 };
 
-export default ProjectsSection;
+export default Jobs;

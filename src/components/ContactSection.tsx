@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Send, Linkedin, Github, MessageSquare } from 'lucide-react';
+import { Send, Linkedin, Github, MessageSquare, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -186,7 +186,7 @@ const ContactSection = () => {
               className="btn-hero w-full group"
             >
               Enviar Mensagem
-              <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+              <Phone className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
             </Button>
           </form>
         </div>

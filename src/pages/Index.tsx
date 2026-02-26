@@ -7,6 +7,7 @@ import AboutSection from '@/components/AboutSection';
 import ProjectsSection from '@/components/ProjectsSection';
 import SkillsSection from '@/components/SkillsSection';
 import ContactSection from '@/components/ContactSection';
+import Jobs from '@/components/jobs';
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
@@ -34,6 +35,7 @@ const Index = () => {
         </section>
           <AboutSection />
           <ProjectsSection />
+          <Jobs />
           <SkillsSection />
           <ContactSection />
         
@@ -45,8 +47,7 @@ const Index = () => {
       <footer className="border-t border-border/30 py-8">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <p className="text-muted-foreground">
-            © 2024 Eric Galvão. Desenvolvido com{' '}
-            <span className="text-red-500">❤️</span> usando React, GSAP e Tailwind CSS.
+            © 2026 Eric Galvão. Todos os direitos reservados.
           </p>
         </div>
       </footer>
