@@ -1,7 +1,7 @@
-import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,14 +14,14 @@ const Jobs = () => {
       title: "PWR Gestão",
       description:
         "Empresa de consultoria focada em soluções de software para gestão empresarial, oferecendo sistemas personalizados para otimizar processos e melhorar a eficiência dos negócios.",
-        technologies: ["Gestão", "Negócios", "Tecnologias", "Sistemas"],
+      technologies: ["Desenvolvimento de Software" ,"Full Stack", "React", "Angular", "Gestão", "Negócios", "Tecnologias", "Sistemas"],
       demoUrl: "https://www.linkedin.com/company/pwrgestao/posts/?feedView=all",
     },
     {
       title: "Bolha",
       description:
         "Empresa de tecnologia especializada em desenvolvimento de software, oferecendo soluções inovadoras para atender às necessidades dos clientes e impulsionar o crescimento dos negócios.",
-      technologies: ["Desenvolvimento", "Inovação", "Tecnologia", "Robotica", "Automação"],
+      technologies: ["Desenvolvimento", "Inovação", "Tecnologia", "Robotica", "Automação", "React", "Angular", "Node.js", "TypeScript", "Context API", "Supabase", "NestJS"],
       demoUrl: "https://www.linkedin.com/company/bolha/posts/?feedView=all",
     },
     {

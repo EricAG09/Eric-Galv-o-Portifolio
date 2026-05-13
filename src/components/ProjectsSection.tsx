@@ -1,7 +1,7 @@
-import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ExternalLink, Github } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -42,12 +42,12 @@ const ProjectsSection = () => {
       githubUrl: "https://github.com/EricAG09/Barbearia-LA-MARFIA",
     },
     {
-      title: "Site institucional de um hotel e restaurante local",
+      title: "Sistema de Vendas PDV",
       description:
-        "Site institucional moderno com design responsivo e otimização de performance.",
-      technologies: ["React", "Tailwind CSS", "Vite"],
-      demoUrl: "https://espaco-bem-estar.vercel.app/",
-      githubUrl: "#",
+        "Sistema de ponto de venda para gerenciamento de vendas, estoque e clientes, com painel dashboard",
+      technologies: ["Angular", "AuthGuard", "FastAPI", "Pydantic"],
+      demoUrl: "/",
+      githubUrl: "https://github.com/EricAG09/Sistema-de-Vendas",
     },
     {
       title: "CRM - Sistema de Gestão de Relacionamento com Clientes",

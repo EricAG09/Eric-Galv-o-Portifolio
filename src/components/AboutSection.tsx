@@ -1,7 +1,7 @@
-import { useEffect, useRef } from 'react';
+import avatarImage from '@/assets/eric.png';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import avatarImage from '@/assets/eric.png';
+import { useEffect, useRef } from 'react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -97,7 +97,8 @@ const AboutSection = () => {
             </p>
             
             <p>
-              Especializado em <span className="text-primary font-medium">React</span>, 
+              Especializado em <span className="text-primary font-medium">React</span>,
+              <span className="text-primary font-medium"> Angular</span>, 
               <span className="text-secondary font-medium"> TypeScript</span>,
               <span className="text-secondary font-medium"> JavaScript</span>,
               <span className="text-secondary font-medium"> React Native</span> e 
@@ -113,7 +114,7 @@ const AboutSection = () => {
           </div>
 
           <div className="flex flex-wrap gap-3 pt-4">
-            {['React', 'JavaScript', 'TypeScript', 'Node.js', 'MySQL', 'React Native', 'Next', 'MongoDB', 'Tailwind CSS'].map((tech) => (
+            {['React', 'Angular', 'JavaScript', 'TypeScript', 'Node.js', 'MySQL', 'Python','React Native', 'Next', 'MongoDB', 'Tailwind CSS'].map((tech) => (
               <span
                 key={tech}
                 className="skill-card text-sm font-medium text-foreground"
